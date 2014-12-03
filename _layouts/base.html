@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{site.url}}/assets/style.css">
+        <title>{{ page.title }}</title>
+    </head>
+    <body>
+        <center>
+        <div id="wholepage">
+        <table class="panels">
+        <tr><td class="titlepane">
+            <table class="panels">
+            <tr><td class="headerpane">
+            {% include header.html %}
+            </td><td class="navpane">
+            {% include navpane.html %}
+            </td></tr></table>
+        </td></tr><tr><td class="page">
+            {{content}}
+        </td></tr><tr><td class="bottompane">
+            {% include footer.html %}
+        </td></tr></table>
+        </div>
+        </center>
+    </body>
+</html>
+

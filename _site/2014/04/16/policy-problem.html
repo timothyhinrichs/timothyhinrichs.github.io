@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/assets/style.css">
+        <title>Policy Problem</title>
+    </head>
+    <body>
+        <center>
+        <div id="wholepage">
+        <table class="panels">
+        <tr><td class="titlepane">
+            <table class="panels">
+            <tr><td class="headerpane">
+            
+<div class="title">
+Rule Your Cloud
+</div>
+<div class="subtitle">
+Using declarative rules to manage the cloud
+</div>
+
+
+            </td><td class="navpane">
+            
+
+  &nbsp;&nbsp;&nbsp;
+  <a href="/">Home</a>
+
+  &nbsp;&nbsp;&nbsp;
+  <a href="/about.html">About</a>
+
+  &nbsp;&nbsp;&nbsp;
+  <a href="/contributors.html">Contributors</a>
+
+  &nbsp;&nbsp;&nbsp;
+  <a href="/feed.xml">Feed</a>
+
+
+            </td></tr></table>
+        </td></tr><tr><td class="page">
+            <div>
+<table class="panels">
+<tr><td class="content">
+    <h1>On Policy in the Data Center - The policy problem</h1>
+<div class="authorship">By Tim Hinrichs, Scott Lowe  with contributions from Martin Casado, Mike Dvorkin, Peter Balland, and Dennis Moreau</div>
+<p>Fully automated IT provisioning and management is considered by many to be the ultimate nirvana—people log into a self-service portal, ask for resources (compute, networking, storage, and others), and within minutes those resources are up and running. No longer are the people who use resources waiting on the people who are responsible for allocating and maintaining them. And, according to the accepted definitions of cloud computing (for example, the NIST definition in SP800-145<a href="http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf">1</a>), self-service provisioning is a key tenet of cloud computing.</p>
+
+<p>However, fully automated IT management is a double-edged sword. While having people on the critical path for IT management was time-consuming, it provided an opportunity to ensure that those resources were managed sensibly and in a way that was consistent with how the business said they ought to be managed. In other words, having people on the critical path enabled IT resources to be managed according to <em>business policy</em>. We cannot simply remove those people without also adding a way of ensuring that IT resources obey business policy—without introducing a way of ensuring that IT resources retain the same level of policy compliance.</p>
+
+<p>While many tools today (e.g. application lifecycle-management, templates, blueprints) claim they bring the data center into compliance with a given policy, there are often hidden assumptions underlying those claims. Before we can hope to understand how effective those tools are, we need to understand the problem of policy and policy compliance, which is the focus of this post. Future posts will begin laying out the space of policy compliance solutions and evaluating how existing policy efforts fit into that space.</p>
+
+<h2 id="the-challenge-of-policy-compliance">The Challenge of Policy Compliance</h2>
+
+<p>Policy compliance is challenging for several reasons. A business policy is often a combination of policies from many different sources. It’s something in the heads of IT operators (“This link is flakey, so route network traffic around it”). It’s written in English as organizational mandates (“We never put applications from different business units on the same production network”). It’s something expressed in contracts between organizations (“Our preferred partners are always given solid-state storage”). It’s something found in governmental legislation (“Data from Singapore’s citizens can never leave the geographic borders of Singapore”).</p>
+
+<p>To complicate matters, all of those different sources of policy have competing objectives, cross multiple levels of system abstraction, are often mutually inconsistent, and are constantly changing. Every time an individual policy changes, significant work may be required to understand the repercussions of those changes on the IT resources. Furthermore, not all policy is created equal. Sometimes it is permissible (or even inevitable) that some policies are violated temporarily (“Ensure every operating system always has the latest security patches installed”). The prospect of policy violations leads to the problem of making choices based on the differing penalties for those violations and how difficult they are to rectify. For example, a violation of the policy ensuring up-to-date operating systems is easy to remedy (install the latest patch), but a violation of a self-stated privacy policy for protecting customer information may cause a public relations storm, which is much harder to remedy.</p>
+
+<p>Despite its complexity, policy compliance is already being addressed today. People take high-level laws, rules, and regulations, and translate them into checklists that describe how the IT infrastructure must be architected, how the software applications running on that infrastructure must be written, and how software applications must be deployed on that infrastructure. Another group of people translate those checklists into configuration parameters for individual components of the infrastructure (e.g. servers, networks, storage) and into functional or non-functional software requirements for the applications deployed on that infrastructure. Network policy is implemented as a myriad of switch, router, and firewall configurations. Server policy is implemented by configuration management systems like Puppet/Chef/CFEngine, keeping systems up to date with the latest security patches, and ensuring that known vulnerabilities are mitigated with other mechanisms such as firewalls. Application developers write special-purpose code to address policy.</p>
+
+<p>Hopefully it is clear that policy compliance is a hard, hard problem. Some of the difficulties are unavoidable. People will always need to deal with the ambiguity and contradictions of laws, rules, and regulations. People will always need to translate those laws into the language of infrastructure and applications. People will always have the job of auditing to ensure a business is in compliance with the law.</p>
+
+<h2 id="automating-policy-compliance">Automating Policy Compliance</h2>
+
+<p>In this post, we focus on the aspects of the policy compliance problem that we believe are amenable to automation. We use the term <em>IT policy</em> from this point forward to refer to the high-level laws, rules, and regulations <em>after</em> they have been translated into the language of infrastructure and applications. This aspect of policy compliance is important because we believe we can automate much of it, and because there are numerous problems with how it is addressed today. For example:</p>
+
+<ol>
+  <li>
+    <p>An IT policy is often written using fairly high-level concepts, e.g. the information applications manipulate, how applications are allowed to communicate, what their performance must be, and how they must be secured. The onus for translating these concepts into infrastructure configuration and application code is left to infrastructure operators and application developers. That translation process is error-prone.</p>
+  </li>
+  <li>
+    <p>The results are often brittle. Moving a server or application from one network to another could cause a policy violation. A new application with different infrastructure requirements could force a network operator to remember why the configuration was the way it was, and to change it in a way that satisfies the IT policy for both the original and the new applications simultaneously.</p>
+  </li>
+  <li>
+    <p>When an auditor comes along to assess policy compliance, she must analyze the plethora of configurations, application code, architecture choices, and deployment options in the current system in order to understand what the IT policy that is being enforced actually is. Because this is so difficult, auditors typically use checklists that give an approximate understanding of compliance.</p>
+  </li>
+  <li>
+    <p>Whenever the IT policy changes (e.g. because new legislation is passed), people must identify the infrastructure components and applications causing (what are suddenly) policy violations and rework them.</p>
+  </li>
+</ol>
+
+<h2 id="key-components-of-policy-compliance-automation">Key Components of Policy Compliance Automation</h2>
+
+<p>We believe that the same tools and technologies that helped automate IT management bring the promise of better, easier, and faster IT policy compliance through policy-aware systems. A policy-aware system has the potential to detect policy violations in the cloud and reconfigure automatically. A policy-aware system has the potential to identify situations where no matter what we do, there is no way to make a proposed change without violating policy. A policy-aware system has the potential to be told about policy updates and react accordingly. A policy-aware system has the potential to maintain enough state about the cloud to identify existing and potential policy violations and either prevent them from occurring or take corrective action.</p>
+
+<p>To enable policy-aware systems, we need at least two things.</p>
+
+<ol>
+  <li>
+    <p>We must communicate the IT policy to the system in a language it can understand. English won’t work; it is ambiguous and thus would require the computer to do the jobs of lawyers. Router and firewall configurations won’t work because they are too low level—the true intent of the policy is lost in the details. We need a language that can unambiguously describe both operational and infrastructure policies using concepts similar to those we would use if writing the policy in English.</p>
+  </li>
+  <li>
+    <p>We need a policy engine that understands that language, can act to bring IT resources into compliance, can interoperate with the ecosystem of software services in a cloud or across multiple clouds, and can help administrators and auditors understand where policy violations are and how to correct them.</p>
+  </li>
+</ol>
+
+<p>In a future post, we’ll examine these key components in a bit more detail and discuss potential solutions for filling these roles. At that time, we’ll also discuss how recent developments like Group Policy for OpenDaylight and OpenStack Neutron fit into this landscape.</p>
+
+<h2 id="one-more-thing-openness">One More Thing: Openness</h2>
+
+<p>There is one more thing that is important for automated policy compliance: openness. As the “highest” layer in a fully-automated IT environment, policy represents the final layer of potential control or “lock-in.” As such, we believe it is critically important that an automated policy compliance solution not fall under the control of any one vendor. An automated policy compliance solution that offers cloud interoperability needs to be developed out in the open, with open governance, open collaboration, and open code access. By leveraging highly successful open source methodologies and approaches, this becomes possible.</p>
+
+<h2 id="wrapping-it-up">Wrapping It Up</h2>
+
+<p>As we wrap this up and prepare for the next installation in this series, here are some key points to remember:</p>
+
+<ul>
+  <li>IT policy compliance in cloud environments is critical. IT resource management <em>cannot</em> be fully and safely automated without policy compliance.</li>
+  <li>Manually enforcing IT policy isn’t sustainable in today’s fast-moving and highly fluid IT environments. An automated IT policy compliance solution is needed.</li>
+  <li>An automated IT policy compliance solution needs the right policy language—one that can express unambiguous concepts in a way that is consumable by both humans and software alike—as well as a policy engine that can understand this policy language and interact with an ecosystem of cloud services to enforce policy compliance.</li>
+  <li>Any policy compliance solution needs to be developed using an open source model, with open governance, open collaboration, and open code access.</li>
+</ul>
+
+<p>In the next part of this series on automated policy compliance in cloud environments, we’ll take a deeper dive into looking at policy languages and policy engines that meet the needs described here.</p>
+
+
+</td><td class="sidebar">
+    <div class="sidebar">
+Previous posts
+<ul>
+  
+    <li>
+      <a href="/2014/12/01/congress-overview.html">Congress Overview</a>
+    </li>
+  
+    <li>
+      <a href="/2014/09/17/openstack-policy-efforts.html">Openstack Policy Efforts</a>
+    </li>
+  
+    <li>
+      <a href="/2014/06/18/solution-space.html">Solution Space</a>
+    </li>
+  
+    <li>
+      <a href="/2014/04/16/policy-problem.html">Policy Problem</a>
+    </li>
+  
+</ul>
+</div>
+
+</td></tr>
+</table>
+</div>
+        </td></tr><tr><td class="bottompane">
+            <div class="footer">
+    <div class="footer-piece center">
+        &copy; 2014 Timothy L. Hinrichs
+    </div>
+</div>
+
+        </td></tr></table>
+        </div>
+        </center>
+    </body>
+</html>
+
