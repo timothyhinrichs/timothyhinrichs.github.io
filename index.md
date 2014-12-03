@@ -1,5 +1,6 @@
 ---
 layout: base_without_sidebar
+comments: False
 ---
 
 {% for post in site.posts %}

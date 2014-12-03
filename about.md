@@ -1,5 +1,6 @@
 ---
 layout: base_with_sidebar
+comments: False
 ---
 
 # About
@@ -11,4 +12,4 @@ The promise of policy technology is incredibly **attractive for customers** (org
 
 Policy technology is **attractive for vendors** because once a piece of technology has been given a description of what is supposed to happen, that technology knows precisely *what* its goals are and is free to implement those goals *how*ever it likes.  This separation of what and how gives vendors the freedom to implement the same API as competitors yet be innovative and differentiate their products.  And by supporting policy, vendors give customers the ability to manage technology the way their customers would like to manage it.
 
-The goal of this blog is to facilitate in-depth discussions about policy technology and how it can impact the world.  We plan to include tutorials, system descriptions, deployment advice, applications, algorithms, position pieces, and the like.  We will focus primarily on cloud computing, but we hope to include exciting advances in related areas as well.
+The goal of this blog is to facilitate in-depth discussions about policy technology and how it can impact the world.  We plan to include tutorials, system descriptions, deployment experiences, applications, algorithms, position pieces, etc.  We will focus primarily on cloud computing, but we hope to include exciting advances in related areas as well.

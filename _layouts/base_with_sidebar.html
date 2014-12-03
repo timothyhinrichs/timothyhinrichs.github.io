@@ -6,6 +6,9 @@ layout: base
 <table class="panels">
 <tr><td class="content">
     {{ content }}
+    <div class="comments">
+        {% include comments.html %}
+    </div>
 </td><td class="sidebar">
     {% include sidebar.html %}
 </td></tr>

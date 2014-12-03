@@ -4,6 +4,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: blog_post
+      comments: True
 
 comments:
     provider: disqus
@@ -13,8 +14,9 @@ pages_list:
   Home: '/'
   About: '/about.html'
   Contributors: '/contributors.html'
-  Feed: '/feed.xml'
 
 name: Rule Your Cloud
-description: Using declarative rules to manage the cloud
+# name: Automating policy
+# name: Cloud By Law
+description: Using policy to manage the cloud
 

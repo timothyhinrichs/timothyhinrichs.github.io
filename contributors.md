@@ -1,5 +1,6 @@
 ---
 layout: base_with_sidebar
+comments: False
 ---
 
 # Contributors
