@@ -17,7 +17,6 @@ pages_list:
   Contributors: '/contributors.html'
 
 name: Rule Your Cloud
-# name: Automating policy
-# name: Cloud By Law
+name_augmentation: ...or at least try to tame it.
 description: Policy-Based Cloud Management
 

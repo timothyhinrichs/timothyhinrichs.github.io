@@ -99,4 +99,4 @@ This blog post has focused on laying out the range of possible solutions to the 
 In the next blog post, we will look at proposed policy systems like the OpenStack Group-Based Policy and the Congress project, and explain how they fit into this solution space.
 
 
-[1]: http://networkheresy.com/2014/04/22/on-policy-in-the-data-center-the-policy-problem/
+[1]: /2014/04/22/on-policy-in-the-data-center-the-policy-problem/

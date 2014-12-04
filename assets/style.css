@@ -39,23 +39,28 @@ h1, h2, h3, h4 {
     font-family: Helvetica, Arial, sans-serif;
     color: #088A08;
 }
-.title {
+.titleblock {
     font-family: Garamond, serif; /*Helvetica, Arial, sans-serif;*/
-    text-align: left;
-    font-size: 400%;
-    padding: 5px;
+    width: 75%;
     color: #088A08;
     font-style: bold;
     background-color: white;
+}
+.title {
+    text-align: left;
+    font-size: 400%;
+    padding: 5px;
     width: 80%;
 }
-.subtitle {
-    font-family: Garamond, serif; /*Helvetica, Arial, sans-serif;*/
-    text-align: left;
+.titleaugment {
+    text-align: right;
     font-size: 120%;
+    width: 80%;
+}
+.titledescription {
+    text-align: left;
+    font-size: 160%;
     padding: 5px;
-    color: #088A08;
-    font-style: bold;
     background-color: white;
     width: 80%;
 }
