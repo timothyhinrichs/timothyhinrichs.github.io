@@ -13,6 +13,7 @@ comments:
 pages_list:
   Home: '/'
   About: '/about.html'
+  Archive: '/archive.html'
   Contributors: '/contributors.html'
 
 name: Rule Your Cloud
