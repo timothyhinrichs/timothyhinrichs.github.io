@@ -74,8 +74,8 @@ For policy to live up to its expectations, we need a rich ecosystem of policy-aw
 To help coordinate the interaction and development of policy-aware services and policy-related efforts in OpenStack, the [OpenStack Mid-Cycle Policy Summit][17] intends to bring representatives from many different policy-minded companies and projects together. The aim of the summit is to discuss the current state of policy within OpenStack and begin discussing the roadmap for how policy will evolve in the future. The summit will start with some presentations by (and about) the various policy-related efforts and their approach to policy; it will wrap up with a workshop focused on how the different efforts might interoperate both today and in the future. Following this summit, which takes place September 18-19, 2014, we'll post another blog entry describing the experience and lessons learned.
 
 
-[1]:  http://networkheresy.com/2014/04/22/on-policy-in-the-data-center-the-policy-problem/
-[2]:  http://networkheresy.com/2014/06/19/on-policy-in-the-data-center-the-solution-space/
+[1]: /2014/04/16/policy-problem.html
+[2]: /2014/06/18/solution-space.html
 [3]: https://wiki.openstack.org/wiki/Congress
 [4]:  https://docs.google.com/document/d/1ZbOFxAoibZbJmDWx1oOrOsDcov6Cuom5aaBIrupCD9E/edit?pli=1
 [5]: https://wiki.opendaylight.org/view/Group_Policy:Main

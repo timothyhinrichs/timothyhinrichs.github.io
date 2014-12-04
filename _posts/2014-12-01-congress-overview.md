@@ -114,13 +114,13 @@ In this post, we've talked about some of the key takeaways regarding Congress:
 Please feel free to join our weekly [IRC meeting][8], check out the [wiki][9], and download and install the [code][10].
 
 
-[1]: https://urldefense.proofpoint.com/v2/url?u=http-3A__networkheresy.com_2014_04_22_on-2Dpolicy-2Din-2Dthe-2Ddata-2Dcenter-2Dthe-2Dpolicy-2Dproblem_&d=AAIFAQ&c=Sqcl0Ez6M0X8aeM67LKIiDJAXVeAw-YihVMNtXt-uEs&r=B6BWd4kFfgOzAREgThxkmTZKy7dDXE2-eBAmL0PBK7s&m=hVvRmTqHcVw4UXsbw4bLSzFzqFk1CHpESe6J7d-DpyU&s=ikyB-WX57pAJkbW5gNV_BF7k30OeiMe0wuPMjQRxbvs&e=
-[2]: https://urldefense.proofpoint.com/v2/url?u=http-3A__networkheresy.com_2014_06_19_on-2Dpolicy-2Din-2Dthe-2Ddata-2Dcenter-2Dthe-2Dsolution-2Dspace_&d=AAIFAQ&c=Sqcl0Ez6M0X8aeM67LKIiDJAXVeAw-YihVMNtXt-uEs&r=B6BWd4kFfgOzAREgThxkmTZKy7dDXE2-eBAmL0PBK7s&m=hVvRmTqHcVw4UXsbw4bLSzFzqFk1CHpESe6J7d-DpyU&s=EMCGKhtAEyb5bzZX0uPGuCLH_CdcaC_Xx0Wi8tv8gto&e=
-[3]: https://urldefense.proofpoint.com/v2/url?u=http-3A__networkheresy.com_2014_09_17_on-2Dpolicy-2Din-2Dthe-2Ddata-2Dcenter-2Dcomparing-2Dopenstack-2Dpolicy-2Defforts_&d=AAIFAQ&c=Sqcl0Ez6M0X8aeM67LKIiDJAXVeAw-YihVMNtXt-uEs&r=B6BWd4kFfgOzAREgThxkmTZKy7dDXE2-eBAmL0PBK7s&m=hVvRmTqHcVw4UXsbw4bLSzFzqFk1CHpESe6J7d-DpyU&s=w8YW4LfLEzz-cREcijAO3STdxnJr9m1Zl0tgtvEsnVE&e=
-[4]: https://urldefense.proofpoint.com/v2/url?u=https-3A__github.com_stackforge_congress_blob_master_doc_source_cloudservices.rst&d=AAIFAQ&c=Sqcl0Ez6M0X8aeM67LKIiDJAXVeAw-YihVMNtXt-uEs&r=B6BWd4kFfgOzAREgThxkmTZKy7dDXE2-eBAmL0PBK7s&m=hVvRmTqHcVw4UXsbw4bLSzFzqFk1CHpESe6J7d-DpyU&s=FPaq8W-EjeCmNEgAykSya9oXPGVpmFfwd7-BUSNGGOY&e=
-[5]: https://urldefense.proofpoint.com/v2/url?u=https-3A__en.wikipedia.org_wiki_Datalog&d=AAIFAQ&c=Sqcl0Ez6M0X8aeM67LKIiDJAXVeAw-YihVMNtXt-uEs&r=B6BWd4kFfgOzAREgThxkmTZKy7dDXE2-eBAmL0PBK7s&m=hVvRmTqHcVw4UXsbw4bLSzFzqFk1CHpESe6J7d-DpyU&s=AxahykhT2a2MqS4Rs0r4CBehfoQVYgWRNIePmV-E4kY&e=
-[6]: https://urldefense.proofpoint.com/v2/url?u=https-3A__github.com_stackforge_congress_blob_master_doc_source_policy.rst&d=AAIFAQ&c=Sqcl0Ez6M0X8aeM67LKIiDJAXVeAw-YihVMNtXt-uEs&r=B6BWd4kFfgOzAREgThxkmTZKy7dDXE2-eBAmL0PBK7s&m=hVvRmTqHcVw4UXsbw4bLSzFzqFk1CHpESe6J7d-DpyU&s=krf12kU7aAFCJsQw5MWsEQelvyKgqjcMlINQMIu7qNI&e=
-[7]: https://urldefense.proofpoint.com/v2/url?u=https-3A__github.com_stackforge_congress&d=AAIFAQ&c=Sqcl0Ez6M0X8aeM67LKIiDJAXVeAw-YihVMNtXt-uEs&r=B6BWd4kFfgOzAREgThxkmTZKy7dDXE2-eBAmL0PBK7s&m=hVvRmTqHcVw4UXsbw4bLSzFzqFk1CHpESe6J7d-DpyU&s=sGkISF1PUrr3cWS-Pko-rcU9Wl0VEoLP_e1Haw9zKbY&e=
+[1]: /2014/04/16/policy-problem.html
+[2]: /2014/06/18/solution-space.html
+[3]: /2014/09/17/openstack-policy-efforts.html
+[4]: https://github.com/stackforge/congress/blob/master/doc/source/cloudservices.rst
+[5]: https://en.wikipedia.org/wiki/Datalog
+[6]: https://github.com/stackforge/congress/blob/master/doc/source/policy.rst
+[7]: https://github.com/stackforge/congress
 [8]: https://wiki.openstack.org/wiki/Meetings/Congress
 [9]: https://wiki.openstack.org/wiki/Congress
-[10]: https://urldefense.proofpoint.com/v2/url?u=https-3A__github.com_stackforge_congress_blob_master_README.rst&d=AAIFAQ&c=Sqcl0Ez6M0X8aeM67LKIiDJAXVeAw-YihVMNtXt-uEs&r=B6BWd4kFfgOzAREgThxkmTZKy7dDXE2-eBAmL0PBK7s&m=hVvRmTqHcVw4UXsbw4bLSzFzqFk1CHpESe6J7d-DpyU&s=3mKMRBmi1mP4HflP5LeWz2qnZKGYgm-c_eK_CF6GmKs&e=
+[10]: https://github.com/stackforge/congress/blob/master/README.rst
