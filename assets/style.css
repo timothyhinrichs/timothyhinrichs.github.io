@@ -20,11 +20,18 @@ body {
     /* box-shadow: 10px 10px 5px #888888; */
 }
 
+.softhr {
+    height: 2px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
 .authorship {
     font-family: Helvetica, Arial, sans-serif;
     font-style: italic;
 }
 
+.indexpost {
+}
 .content {
     padding: 15px;
 }
@@ -85,26 +92,32 @@ td.navpane {
     padding-right: 10px;
 }
 
-.code {
-    border: 1px solid brown;
-    background-color: #FEF0DB;
+.postexcerpt {
+    margin-left: 20px;
 }
+
 .bottompane {
     text-align: center;
     font-size: 85%;
     padding: 10px;
     border-top: 2px solid #EAEAEA;
 }
+.indextitle {
+
+}
 
 a:link {
     text-decoration: none;
+    font-style: bold;
     color: #088A08; /*#012D08;*/
 }
 a:visited {
     text-decoration: none;
+    font-style: bold;
     color: #088A08; /*#3C1107; */
 }
 a:hover, a:active {
+    font-style: bold;
     text-decoration: underline;
 }
 
