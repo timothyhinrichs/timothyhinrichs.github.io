@@ -1,5 +1,5 @@
 ---
-layout: base_without_sidebar
+layout: base_with_sidebar
 comments: False
 ---
 
