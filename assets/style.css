@@ -101,6 +101,11 @@ td.navpane {
     margin-left: 20px;
 }
 
+.blognav {
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
 .bottompane {
     text-align: center;
     font-size: 85%;
