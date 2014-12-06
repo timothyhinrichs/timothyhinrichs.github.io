@@ -1,15 +1,16 @@
 ---
-Title:				On Policy in the Data Center - The policy problem
+title:				On Policy in the Data Center - The policy problem
 Project:			Congress
-Author:				Tim Hinrichs, Scott Lowe
+Author:				Tim Hinrichs and Scott Lowe
 Contributors:       Martin Casado, Mike Dvorkin, Peter Balland, and Dennis Moreau
 Affiliation:		VMware, Inc.
 Date:				2014-05-08
 Keywords:			Congress, OpenStack, Policy, Blog
 Quotes Language:	english
+layout:             post
 ---
 
-Fully automated IT provisioning and management is considered by many to be the ultimate nirvana---people log into a self-service portal, ask for resources (compute, networking, storage, and others), and within minutes those resources are up and running. No longer are the people who use resources waiting on the people who are responsible for allocating and maintaining them. And, according to the accepted definitions of cloud computing (for example, the NIST definition in SP800-145[1]), self-service provisioning is a key tenet of cloud computing.
+Fully automated IT provisioning and management is considered by many to be the ultimate nirvana---people log into a self-service portal, ask for resources (compute, networking, storage, and others), and within minutes those resources are up and running. No longer are the people who use resources waiting on the people who are responsible for allocating and maintaining them. And, according to the accepted definitions of cloud computing (for example, the [NIST definition in SP800-145][1]), self-service provisioning is a key tenet of cloud computing.
 
 However, fully automated IT management is a double-edged sword. While having people on the critical path for IT management was time-consuming, it provided an opportunity to ensure that those resources were managed sensibly and in a way that was consistent with how the business said they ought to be managed. In other words, having people on the critical path enabled IT resources to be managed according to *business policy*. We cannot simply remove those people without also adding a way of ensuring that IT resources obey business policy---without introducing a way of ensuring that IT resources retain the same level of policy compliance.
 

@@ -1,9 +1,9 @@
 ---
-layout: base_without_sidebar
+layout: page
+title: Blog Entries
+header: Blog Entries
 comments: False
 ---
-
-# Archive
 
 {% for post in site.posts %}
 
@@ -11,7 +11,7 @@ comments: False
     <ul>
         <li>
             {{ post.date | date_to_string }}:
-                <a href="{{ post.url }}">{{ post.Title }}</a>
+                <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
     </ul>
 </div>

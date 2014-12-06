@@ -1,11 +1,12 @@
 ---
-Title:              On Policy in the Data Center - The solution space
+title:              On Policy in the Data Center - The solution space
 Project:            Congress
-Author:             Tim Hinrichs, Scott Lowe
+Author:             Tim Hinrichs and Scott Lowe
 Affiliation:        VMware, Inc.
 Date:               2014-06-18
 Keywords:           Congress, OpenStack, Policy, Blog
 Quotes Language:    english
+layout:             post
 ---
 
 In the [first part of this series][1] we described the policy problem: ensuring that the data center obeys the real-world rules and regulations that are pertinent to that data center. In this post, we look at the range of possible solutions by identifying some the key features that are important for any solution to the policy problem.  Those key features correspond to the following four questions, which we use to structure our discussion.

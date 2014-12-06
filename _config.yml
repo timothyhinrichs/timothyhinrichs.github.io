@@ -1,22 +1,35 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 1 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: pygments
+markdown: kramdown
+
+
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: "" # empty string for all files
     values:
-      layout: blog_post
-      comments: True
+      title: Rule Your Cloud ...or at least try to tame it
 
-comments:
-    provider: disqus
-    account: timothyhinrichs
+description: Policy-based cloud management
+author:
+  name: Tim Hinrichs
+  email: timothy.l.hinrichs@gmail.com
+  # github: timothyhinrichs
+  twitter: tim_l_hinrichs
+  # pinterest: asd123
+  # linkedin: asd123
+  # bio: Declarative language software engineer
+  # email_md5: 726351295ec82e145928582f595aa3aa
 
-pages_list:
-  Home: '/'
-  About: '/about.html'
-  Archive: '/archive.html'
-  Contributors: '/contributors.html'
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+about_path: about.html
+archive_path: archive.html
+authors_path: authors.html
 
-name: Rule Your Cloud
-name_augmentation: ...or at least try to tame it.
-description: Policy-Based Cloud Management
-
+BASE_PATH:

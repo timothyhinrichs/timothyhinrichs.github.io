@@ -1,11 +1,12 @@
 ---
-Title:				On Policy in the Data Center - Comparing policy efforts
+title:				On Policy in the Data Center - Comparing policy efforts
 Project:			Congress
-Author:				Tim Hinrichs, Scott Lowe
+Author:				Tim Hinrichs and Scott Lowe
 Affiliation:		VMware, Inc.
 Date:				2014-09-16
 Keywords:			Congress, OpenStack, Policy
 Quotes Language:	english
+layout:             post
 ---
 
 In the first two parts of this blog series we discussed the problem of [policy in the data center][1] and [the features that differentiate solutions to that problem][2]. In this post, we give a high-level overview of several policy efforts within OpenStack.

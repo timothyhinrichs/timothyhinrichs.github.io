@@ -1,11 +1,11 @@
 ---
-layout: base_with_sidebar
+layout: page
+title: About
+header: About
 comments: False
 ---
 
-# About
-
-For well over a year, there has been growing interest in **policy technology** in the field of **cloud computing**.  While everyone means something different by *policy*, for our purposes *policy* means anything that describes how the cloud should behave.  Policy might dictate the ideal behavior for the cloud in terms of compute, networking, storage, and applications, or it might describe the cloud's ideal behavior in terms of cost, risk, and security.  The abstractions and form of the description are irrelevant; what matters for us is that a *policy* describes how the cloud should behave.
+Recently there has been growing interest in **policy technology** in the field of **cloud computing**.  While everyone means something different by *policy*, for our purposes *policy* means anything that describes how the cloud should behave.  Policy might dictate the ideal behavior for the cloud in terms of compute, networking, storage, and applications, or it might describe the cloud's ideal behavior in terms of cost, risk, and security.  The abstractions and form of the description are irrelevant; what matters for us is that a *policy* describes how the cloud should behave.
 
 # Why Policy?
 

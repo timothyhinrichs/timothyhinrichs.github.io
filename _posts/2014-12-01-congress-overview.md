@@ -1,12 +1,13 @@
 ---
-Title:              On Policy in the Data Center - Congress
+title:              On Policy in the Data Center - Congress
 Project:            Congress
-Author:             Tim Hinrichs, Scott Lowe
-Contributors:		Alex Yip, Dmitri Kalintsev, Peter Balland
+Author:             Tim Hinrichs and Scott Lowe
+Contributors:		Alex Yip, Dmitri Kalintsev, and Peter Balland
 Affiliation:        VMware, Inc.
 Date:               2014-12-01
 Keywords:           Congress, OpenStack, Policy
 Quotes Language:    english
+layout:             post
 ---
 
 
