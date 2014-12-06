@@ -30,9 +30,9 @@ A Congress policy is domain independent and can describe the behavior of any col
 
 The recent [alpha release of Congress][18] supports monitoring violations in policy: comparing how the data center is actually behaving to how policy says the data center ought to behave and flagging mismatches. In the future, Congress will also support enforcement by having Congress itself execute API calls to change the behavior of the data center and/or pushing policy to other policy-aware services better positioned to enforce policy.
 
-## [Neutron Group-Based Policy (GBP)] [4]
+## Neutron Group-Based Policy
 
-GBP, which is similar to the policy effort in [OpenDaylight][5], utilizes policy to manage networking. A policy describes how the network packets in the data center are supposed to behave. Each policy ("contract" in GBP terminology) describes which actions (such as allow, drop, reroute, or apply QoS) should be applied to which network packets based on packet header properties like port and protocol. Entities on the network (called "endpoints") are grouped and each group is assigned one or more policies. Groups are maintained outside the policy language by people or automated systems.
+[Neutron Group-Based Policy GBP][4], which is similar to the policy effort in [OpenDaylight][5], utilizes policy to manage networking. A policy describes how the network packets in the data center are supposed to behave. Each policy ("contract" in GBP terminology) describes which actions (such as allow, drop, reroute, or apply QoS) should be applied to which network packets based on packet header properties like port and protocol. Entities on the network (called "endpoints") are grouped and each group is assigned one or more policies. Groups are maintained outside the policy language by people or automated systems.
 
 In GBP, policies can come from any number of people or agents. Conflicts can arise within a single policy or across several policies and are eliminated by a mechanism built into GBP (which is out of scope for this blog post).
 

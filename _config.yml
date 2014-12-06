@@ -14,6 +14,11 @@ defaults:
     values:
       title: Rule Your Cloud ...or at least try to tame it
 
+comments:
+    provider: disqus
+    account: timothyhinrichs
+
+
 description: Policy-based cloud management
 author:
   name: Tim Hinrichs
