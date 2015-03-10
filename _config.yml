@@ -37,4 +37,4 @@ about_path: about.html
 archive_path: archive.html
 authors_path: authors.html
 
-BASE_PATH:
+BASE_PATH: http://ruleyourcloud.com
