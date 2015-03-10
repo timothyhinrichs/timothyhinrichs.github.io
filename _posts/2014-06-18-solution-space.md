@@ -2,9 +2,9 @@
 title:              On Policy in the Data Center - The solution space
 Project:            Congress
 Author:             Tim Hinrichs and Scott Lowe
-Affiliation:        VMware, Inc.
-Date:               2014-06-18
-Keywords:           Congress, OpenStack, Policy, Blog
+Contributors:
+Date:               2014-09-16
+Keywords:           Congress, OpenStack, Policy
 Quotes Language:    english
 layout:             post
 ---
@@ -98,6 +98,7 @@ This blog post has focused on laying out the range of possible solutions to the 
 * Once a policy system has a policy, it can audit, monitor, and enforce that policy. A solution to the policy problem is more or less successful at these functions depending on the policy and the data center.
 
 In the next blog post, we will look at proposed policy systems like the OpenStack Group-Based Policy and the Congress project, and explain how they fit into this solution space.
+
 
 
 [1]: /2014/04/16/policy-problem.html

@@ -102,7 +102,7 @@ article{
 }
 
 article {
-	padding: 0 5% 0;
+	padding: 0 0 0;
 }
 
 article.home div a, article.home pre a { color: #2c3e50; }
@@ -195,4 +195,20 @@ ul.dropdown-menu>li>a>i.fa {
 .recentposts {
     padding-top: 5px;
     padding-bottom: 20px;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:2px solid #000000;
+}
+
+th{
+    border:2px solid #000000;
+    padding: 3px;
+}
+
+td{
+    border:1px solid #000000;
+    padding: 3px;
 }

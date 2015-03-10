@@ -2,16 +2,15 @@
 title:              On Policy in the Data Center - Congress
 Project:            Congress
 Author:             Tim Hinrichs and Scott Lowe
-Contributors:		Alex Yip, Dmitri Kalintsev, and Peter Balland
-Affiliation:        VMware, Inc.
+Contributors:       Alex Yip, Dmitri Kalintsev, and Peter Balland
 Date:               2014-12-01
 Keywords:           Congress, OpenStack, Policy
 Quotes Language:    english
 layout:             post
 ---
 
-
 In the first few parts of this series, we discussed the [policy problem][1], we outlined dimensions of the [solution space][2], and we gave a brief overview of the existing [OpenStack policy efforts][3]. In this post we do a deep dive into one of the (not yet incubated) OpenStack policy efforts: Congress.
+
 
 ## Overview
 
@@ -36,13 +35,13 @@ From the policy writer's point of view, each service is simply a collection of t
 
 For example, the Nova compute service is represented as several tables like the _servers_ table below.
 
-	+---------+----------+--------+-----------+----------+-----------+
-	| id      | host_id  | status | tenant_id | image_id | flavor_id |
-	+---------+----------+--------+-----------+----------+-----------+
-	| <UUID1> | <UUID2>  | ACTIVE | alice     | <UUID3>  | <UUID4>   |
-	| <UUID5> | <UUID6>  | ACTIVE | bob       | <UUID7>  | <UUID8>   |
-	| <UUID9> | <UUID10> | DOWN   | bo        | <UUID7>  | <UUID8>   |
-	+---------+----------+--------+-----------+----------+-----------+
+    +---------+----------+--------+-----------+----------+-----------+
+    | id      | host_id  | status | tenant_id | image_id | flavor_id |
+    +---------+----------+--------+-----------+----------+-----------+
+    | <UUID1> | <UUID2>  | ACTIVE | alice     | <UUID3>  | <UUID4>   |
+    | <UUID5> | <UUID6>  | ACTIVE | bob       | <UUID7>  | <UUID8>   |
+    | <UUID9> | <UUID10> | DOWN   | bo        | <UUID7>  | <UUID8>   |
+    +---------+----------+--------+-----------+----------+-----------+
 
 At the time of writing, there are adapters (which we call "datasource drivers") for each of the following services, all but one of which are OpenStack.
 
@@ -71,23 +70,23 @@ Suppose our policy says that all servers should on average have a CPU utilizatio
 
 First, we declare the conditions under which there is a policy violation. We do that by writing a rule that says a VM is an error (policy violation) if the conditions shown below are true.  (Lines starting with // are comments.)
 
-	error(vm, email_address) :-
-		// myid is a server owned by owner
-		nova:servers(id=myid, tenant_id=owner),
-		// start_date is 2 days before end_date; end_date is today
-		two_days_previous(start_date, end_date),
-		// value is average cpu-utilization for last 2 days for server myid
-		ceilometer:statistics(id=myid, start=start_date, end=end_date, meter="cpu-util", avg=value),
-		// value is less than 20%
-		arithmetic:less_than(value, 20),
-		// email_address is owner's email
-		keystone:user(id=owner, email=email_address)
+    error(vm, email_address) :-
+        // myid is a server owned by owner
+        nova:servers(id=myid, tenant_id=owner),
+        // start_date is 2 days before end_date; end_date is today
+        two_days_previous(start_date, end_date),
+        // value is average cpu-utilization for last 2 days for server myid
+        ceilometer:statistics(id=myid, start=start_date, end=end_date, meter="cpu-util", avg=value),
+        // value is less than 20%
+        arithmetic:less_than(value, 20),
+        // email_address is owner's email
+        keystone:user(id=owner, email=email_address)
 
 We also define a helper table that computes the start and end dates for 2 days before today.
 
-	two_days_previous(start_date, end_date) :-
-		datetime:now(end_date),
-		datetime:minus(end_date, "2 days", start_date)
+    two_days_previous(start_date, end_date) :-
+        datetime:now(end_date),
+        datetime:minus(end_date, "2 days", start_date)
 
 Helper tables like `two_days_previous` are useful because they allow the policy writer to create higher-level concepts that may not exist natively in the cloud services. For example, we can create a helper table that tells us which servers are connected to the Internet---something that requires information from several different places in OpenStack. Or the compute, networking, and storage admins could create the higher-level concept "is-secure" and enable a higher-level manager to write a policy that describes when resources ought to be secured.
 

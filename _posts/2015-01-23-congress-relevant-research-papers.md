@@ -8,9 +8,12 @@ Date:               2015-01-10
 Keywords:           Congress, OpenStack, Policy
 Quotes Language:    english
 layout:             post
+fullview:           false
 ---
 
-While perusing the latest research conference proceedings, I found a number of papers relevant to [Congress][1].  Here are the conferences I surveyed.
+While perusing the 2014 research conference proceedings, I found a number of papers relevant to [Congress][1].  In this post I've cited each paper, given a quick overview of the main ideas, and described why it is relevant to Congress.  The hope is that some of the core ideas in these papers will be springboards to help us address similar issues in Congress.
+
+Here are the conferences I surveyed.
 
 * Computer Security: [Oakland][oakland2014], [Usenix Security][usenix2014], [NDSS][ndss2014], [CCS][ccs2014], [CSF][csf2014]
 * Programming languages: [POPL][popl2014], [PLDI][pldi2014]
@@ -18,7 +21,6 @@ While perusing the latest research conference proceedings, I found a number of p
 * Operating Systems: [OSDI][osdi2014], [SOSP 2013][sosp2013], [SIGCOMM][sigcomm2014]
 * Artificial Intelligence/Logic: [AAAI][aaai2014], [IJCAI 2013][ijcai2013], [ICLP][iclp2014]
 
-Below I've cited each paper, given a quick overview of the main ideas, and described why it is relevant to Congress.  The hope is that some of the core ideas in these papers will be springboards to help us address similar issues in Congress.
 
 ## Datasources
 

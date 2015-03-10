@@ -4,7 +4,7 @@ tagline: ...or at least try to tame it.
 title: RuleYourCloud
 ---
 
-<p>Recently we've seen a growing number of cloud management products that support policy languages, a trend that will eventually enable a purely policy-based approach to cloud management.</p>
+<!-- <p>Recently we've seen a growing number of cloud management products that support policy languages, a trend that will eventually enable a purely policy-based approach to cloud management.</p>
 
 <p>RuleYourCloud is a blog dedicated to furthering the trend toward policy-based cloud management--toward a world in which we rule the cloud with rules.</p>
 
@@ -13,9 +13,9 @@ title: RuleYourCloud
   <li><a href="{{ site.about_path }}">About</a>: more information about this blog
   <li><a href="{{ site.archive_path }}">Blog Entries</a>: the actual blog entries
   <li><a href="{{ site.authors_path }}">Contributors</a>: biographical information for authors of blog entries
-</ul>
+</ul> -->
 
-<!-- {% for post in paginator.posts %}
+{% for post in paginator.posts %}
 
 <article class="home">
 
@@ -32,7 +32,7 @@ title: RuleYourCloud
   </span>
 
   <h2>
-    <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ post.url }}">{{ post.title }}</a>
   </h2>
 
   <div>
@@ -83,4 +83,4 @@ title: RuleYourCloud
   </li>
   {% endif %}
 
-</ul> -->
+</ul>

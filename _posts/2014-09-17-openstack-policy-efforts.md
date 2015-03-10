@@ -1,11 +1,11 @@
 ---
-title:				On Policy in the Data Center - Comparing policy efforts
-Project:			Congress
-Author:				Tim Hinrichs and Scott Lowe
-Affiliation:		VMware, Inc.
-Date:				2014-09-16
-Keywords:			Congress, OpenStack, Policy
-Quotes Language:	english
+title:              On Policy in the Data Center - Comparing policy efforts
+Project:            Congress
+Author:             Tim Hinrichs and Scott Lowe
+Contributors:
+Date:               2014-09-16
+Keywords:           Congress, OpenStack, Policy
+Quotes Language:    english
 layout:             post
 ---
 
@@ -93,3 +93,4 @@ To help coordinate the interaction and development of policy-aware services and 
 [16]: https://review.openstack.org/#/c/95907/7/specs/convergence.rst
 [17]: https://www.eventbrite.com/e/openstack-policy-summit-tickets-12642081807
 [18]: https://github.com/stackforge/congress
+

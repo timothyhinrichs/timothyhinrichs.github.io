@@ -1,12 +1,11 @@
 ---
-title:				On Policy in the Data Center - The policy problem
-Project:			Congress
-Author:				Tim Hinrichs and Scott Lowe
+title:              On Policy in the Data Center - The policy problem
+Project:            Congress
+Author:             Tim Hinrichs and Scott Lowe
 Contributors:       Martin Casado, Mike Dvorkin, Peter Balland, and Dennis Moreau
-Affiliation:		VMware, Inc.
-Date:				2014-05-08
-Keywords:			Congress, OpenStack, Policy, Blog
-Quotes Language:	english
+Date:               2014-05-08
+Keywords:           Congress, OpenStack, Policy
+Quotes Language:    english
 layout:             post
 ---
 
